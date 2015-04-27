@@ -17,7 +17,7 @@ android {
 
 dependencies {
     compile 'com.google.code.gson:gson:2.3.1'
-    compile 'com.github.lukaspili.flow:flow:0.9-3'
+    compile 'com.github.lukaspili:flow:0.9-SNAPSHOT'
 }
 
 android.libraryVariants.all { variant ->

@@ -42,18 +42,28 @@ All feedback welcomed.
 
 ## Installation
 
-Flow-navigation is available on maven central.
+Flow-navigation is available on OSS sonatype.
 
 ```groovy
+repositories {
+	maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+}
+
 dependencies {
-    apt 'com.github.lukaspili:flow-navigation:0.1-SNAPSHOT'
+    compile 'com.github.lukaspili:flow-navigation:0.1-SNAPSHOT@aar'
 }
 ```
 
-Flow-navigation uses the following dependency for Flow, which is up-to-date with the latest Flow commit.
+Flow-navigation uses an alternative dependency for Flow, which is up-to-date with the latest Flow commit, also hosted on sonatype ([https://github.com/lukaspili/flow](https://github.com/lukaspili/flow)).
 
 ```groovy
-compile 'com.github.lukaspili.flow:flow:0.9-3' // hosted on "https://jitpack.io"
+repositories {
+	maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+}
+
+dependencies {
+	compile 'com.github.lukaspili:flow:0.9-SNAPSHOT'
+}
 ```
 
 ## Mortar MVP
