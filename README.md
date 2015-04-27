@@ -42,24 +42,18 @@ All feedback welcomed.
 
 ## Installation
 
-Add jitpack.io as maven repository.  
+Flow-navigation is available on maven central.
 
 ```groovy
-repositories {
-    maven { url "https://jitpack.io" }
-}
-
 dependencies {
-    apt 'com.github.lukaspili.flow-navigation:flow-navigation:0.1.0'
+    apt 'com.github.lukaspili:flow-navigation:0.1-SNAPSHOT'
 }
 ```
 
-The reason we use explicit version numbers is because jitpack.io does not work well with snapshot versions.
-
-Also, flow-navigation uses the following dependency for Flow, which is up to date with the latest Flow commit.
+Flow-navigation uses the following dependency for Flow, which is up-to-date with the latest Flow commit.
 
 ```groovy
-compile 'com.github.lukaspili.flow:flow:0.9-3'
+compile 'com.github.lukaspili.flow:flow:0.9-3' // hosted on "https://jitpack.io"
 ```
 
 ## Mortar MVP
