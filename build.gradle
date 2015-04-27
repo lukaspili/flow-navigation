@@ -1,5 +1,5 @@
 ext.deps = [
-        android_gradle_plugin: 'com.android.tools.build:gradle:1.1.0',
+        android_gradle_plugin: 'com.android.tools.build:gradle:1.2.0',
 ]
 
 ext.minSdkVersion = 14
@@ -21,11 +21,8 @@ subprojects {
         maven { url "http://oss.sonatype.org/content/repositories/snapshots" }
         maven { url "https://jitpack.io" }
         mavenCentral()
-        mavenLocal()
     }
 
     group = GROUP
     version = VERSION_NAME
-
-    apply plugin: 'maven-publish'
 }

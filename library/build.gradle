@@ -31,12 +31,14 @@ android.libraryVariants.all { variant ->
     artifacts.add('archives', task);
 }
 
-android.libraryVariants
-publishing {
-    publications {
-        maven(MavenPublication) {
-            artifact jarRelease
-            artifactId = POM_ARTIFACT_ID
+apply from: 'https://raw.github.com/chrisbanes/gradle-mvn-push/master/gradle-mvn-push.gradle'
+
+// see: https://github.com/chrisbanes/gradle-mvn-push/issues/43
+afterEvaluate { project ->
+    android.libraryVariants.all { variant ->
+        tasks.androidJavadocs.doFirst {
+            failOnError false
+            classpath += files(variant.javaCompile.classpath.files)
         }
     }
 }
