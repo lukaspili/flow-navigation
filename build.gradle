@@ -3,6 +3,7 @@ ext.deps = [
 ]
 
 ext.minSdkVersion = 14
+ext.targetSdkVersion = 21
 ext.compileSdkVersion = 21
 ext.buildToolsVersion = '21.1.2'
 

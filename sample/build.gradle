@@ -1,0 +1,40 @@
+buildscript {
+    dependencies {
+        classpath deps.android_gradle_plugin
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.4'
+    }
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        applicationId "com.example.flow"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode 1
+        versionName VERSION_NAME
+    }
+}
+
+dependencies {
+    compile project (':library')
+
+    compile 'com.android.support:support-v4:22.0.0'
+    compile 'com.android.support:recyclerview-v7:22.0.0'
+
+    apt 'com.google.dagger:dagger-compiler:2.0'
+    compile 'com.google.dagger:dagger:2.0'
+
+    compile 'com.github.lukaspili:mortar:0.17-SNAPSHOT'
+    compile 'com.github.lukaspili:dagger2support:0.17-SNAPSHOT'
+
+    provided 'javax.annotation:jsr250-api:1.0'
+
+    compile 'com.jakewharton:butterknife:6.1.0'
+    compile 'com.jakewharton.timber:timber:2.7.1'
+    compile 'com.squareup.retrofit:retrofit:1.9.0'
+}
