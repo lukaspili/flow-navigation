@@ -1,0 +1,42 @@
+buildscript {
+    dependencies {
+        classpath deps.android_gradle_plugin
+    }
+}
+
+apply plugin: 'com.android.library'
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        versionName VERSION_NAME
+    }
+}
+
+dependencies {
+    compile 'com.google.code.gson:gson:2.3.1'
+    compile 'com.github.lukaspili.flow:flow:0.9-3'
+}
+
+android.libraryVariants.all { variant ->
+    def name = variant.buildType.name
+    if (name.equals(com.android.builder.core.BuilderConstants.DEBUG)) {
+        return; // Skip debug builds.
+    }
+    def task = project.tasks.create "jar${name.capitalize()}", Jar
+    task.dependsOn variant.javaCompile
+    task.from variant.javaCompile.destinationDir
+    artifacts.add('archives', task);
+}
+
+android.libraryVariants
+publishing {
+    publications {
+        maven(MavenPublication) {
+            artifact jarRelease
+            artifactId = POM_ARTIFACT_ID
+        }
+    }
+}
