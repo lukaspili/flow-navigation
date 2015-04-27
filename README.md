@@ -50,7 +50,7 @@ repositories {
 }
 
 dependencies {
-    compile 'com.github.lukaspili:flow-navigation:0.1-SNAPSHOT@aar'
+    compile 'com.github.lukaspili:flow-navigation:0.1-SNAPSHOT'
 }
 ```
 
