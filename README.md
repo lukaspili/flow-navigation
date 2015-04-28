@@ -1,43 +1,43 @@
-# Flow navigation
+# Flow-navigation
 
-Flow navigation is an alternative to flow-path from Flow.  
+Flow-navigation is an alternative library to Flow-path from Flow.  
 
 
 ### Why
 
-Flow-path was extracted from flow as standalone additional library, in order to provide convenient classes to work with screens and navigation. However flow-path does not preserve the paths in flow history.  
+Flow-path was extracted from Flow as an additional library, in order to provide convenient classes to work with screens and navigation. However Flow-path does not preserve the paths in Flow history.  
 
-For instance, if we go from path A to path B, the scope associated to the path A will be destroyed once we're in path B. And when we go back to path A, the scope associated to A is recreated (and everything within, like the presenter).
+For instance, if we go from path A to path B, the scope associated with path A will be destroyed once we display path B. And when we go back to path A, the scope associated with A is recreated (and everything within, like the presenter).
 
-With flow-navigation, path A and its scope are not destroyed when we reach path B. It represents a more natural and logical logic of navigation.
+With Flow-navigation, path A and its scope are not destroyed when we reach path B. It seems to be a more natural and logical way of navigation.
 
-During FORWARD navigation, flow navigation preserves only the scope, the view is still destroyed. And in BACKWARD and REPLACE navigation, everything is destroyed like it should.
+During FORWARD navigation, Flow-navigation preserves the scope and the view is still destroyed. In BACKWARD and REPLACE navigation, everything is destroyed like it should be.
 
 
-### Worflow with flow-path
+### Worflow with Flow-path
 
 ![Flow path](./doc/flow_path.png "Flow path")
 
 
-### Workflow with flow navigation
+### Workflow with Flow-navigation
 
 ![Flow navigation](./doc/flow_navigation.png "Flow navigation")
 
 
-## Usage
+## Use
 
-Structure of flow navigation is very similar to flow-path. You basically need to replace the package import from flow.path to flownavigation. Classes like `Path` and `PathContainer` still exists and work in the same way than the ones from flow-path.
+The structure of Flow-navigation is very similar to the one of Flow-path. You basically need to replace the package import from flow.path to flownavigation. Classes like `Path` and `PathContainer` still exist and work in the same way than the ones from Flow-path.
 
-In addition, flow-navigation provides some classes from Flow sample that are often reused in all projects. Like @Layout annotation (recently moved out from Flow library), SimplePathContainer and FramePathContainerView.
+In addition, Flow-navigation provides classes from Flow sample that can be reused often, like `@Layout` annotation (removed from Flow library), `SimplePathContainer` and `FramePathContainerView`.
 
-Checkout the sample in order to see how it works, but it's basically the same as flow-path except the scope isn't destroyed during FORWARD navigation.
+You can check the sample in order to see details on a complete implementation of Flow-navigation with Flow / Mortar / Dagger2.
 
 
 ## Status
 
 It's more an experiment than a library so far.  
-It works fine in my first tests, but probably many edges cases non-covered.  
-All feedback welcomed.
+It's working well in my first tests, but there might have many edge cases not covered.  
+Feedback welcome.
 
 
 ## Installation
@@ -54,7 +54,7 @@ dependencies {
 }
 ```
 
-Flow-navigation uses an alternative dependency for Flow, which is up-to-date with the latest Flow commit, also hosted on sonatype ([https://github.com/lukaspili/flow](https://github.com/lukaspili/flow)).
+Flow-navigation uses an alternative dependency for Flow, which is up-to-date with the latest commit from Flow repository, also hosted on sonatype ([https://github.com/lukaspili/flow](https://github.com/lukaspili/flow)).
 
 ```groovy
 repositories {
@@ -81,4 +81,4 @@ Check it out here: [https://github.com/lukaspili/mortar-mvp](https://github.com/
 
 ## License
 
-Mortar MVP is released under the MIT license. See the LICENSE file for more info.
+Mortar MVP is released under the MIT license. See the LICENSE file for details.
