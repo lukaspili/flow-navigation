@@ -5,7 +5,6 @@ import android.util.Log;
 
 import flownavigation.path.Path;
 import mortar.MortarScope;
-import mortar.dagger2support.DaggerService;
 
 /**
  * @author Lukasz Piliszczuk - lukasz.pili@gmail.com

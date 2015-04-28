@@ -6,13 +6,13 @@ import android.util.AttributeSet;
 import android.widget.FrameLayout;
 
 import com.example.flow.R;
+import com.example.flow.mortar.DaggerService;
 import com.example.flow.ui.screen.PostsScreen;
 
 import javax.inject.Inject;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
-import mortar.dagger2support.DaggerService;
 
 /**
  * @author Lukasz Piliszczuk <lukasz.pili@gmail.com>

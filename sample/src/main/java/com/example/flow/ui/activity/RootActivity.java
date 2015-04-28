@@ -8,6 +8,7 @@ import android.view.MenuItem;
 import com.example.flow.R;
 import com.example.flow.app.App;
 import com.example.flow.dagger.ActivityScope;
+import com.example.flow.mortar.DaggerService;
 import com.example.flow.ui.screen.PostsScreen;
 import com.google.gson.Gson;
 
@@ -22,7 +23,6 @@ import flownavigation.path.Path;
 import flownavigation.path.PathContainerView;
 import mortar.MortarScope;
 import mortar.bundler.BundleServiceRunner;
-import mortar.dagger2support.DaggerService;
 
 /**
  * @author Lukasz Piliszczuk <lukasz.pili@gmail.com>

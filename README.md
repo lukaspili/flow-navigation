@@ -54,17 +54,6 @@ dependencies {
 }
 ```
 
-Flow-navigation uses an alternative dependency for Flow, which is up-to-date with the latest commit from Flow repository, also hosted on sonatype ([https://github.com/lukaspili/flow](https://github.com/lukaspili/flow)).
-
-```groovy
-repositories {
-	maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
-}
-
-dependencies {
-	compile 'com.github.lukaspili:flow:0.9-SNAPSHOT'
-}
-```
 
 ## Mortar MVP
 

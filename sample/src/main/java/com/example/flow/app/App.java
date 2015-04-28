@@ -4,13 +4,13 @@ import android.app.Application;
 import android.content.Context;
 
 import com.example.flow.BuildConfig;
+import com.example.flow.mortar.DaggerService;
 import com.example.flow.rest.RestClient;
 
 import javax.inject.Singleton;
 
 import dagger.Provides;
 import mortar.MortarScope;
-import mortar.dagger2support.DaggerService;
 import timber.log.Timber;
 
 public class App extends Application {
