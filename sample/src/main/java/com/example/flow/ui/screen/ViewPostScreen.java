@@ -12,8 +12,8 @@ import com.example.flow.ui.view.ViewPostView;
 import javax.inject.Inject;
 
 import dagger.Provides;
+import flownavigation.common.flow.Layout;
 import flownavigation.path.Path;
-import flownavigation.view.Layout;
 import mortar.ViewPresenter;
 
 /**

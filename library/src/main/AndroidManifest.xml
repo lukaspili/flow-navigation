@@ -1,6 +1,4 @@
-<manifest
-    package="flownavigation">
+<manifest package="flownavigation">
 
     <application/>
-
 </manifest>

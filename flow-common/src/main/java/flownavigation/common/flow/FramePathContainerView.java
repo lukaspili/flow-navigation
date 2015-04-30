@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package flownavigation.view;
+package flownavigation.common.flow;
 
 import android.content.Context;
 import android.util.AttributeSet;
@@ -23,10 +23,6 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 
 import flow.Flow;
-import flownavigation.R;
-import flownavigation.common.BackSupport;
-import flownavigation.common.HandlesBack;
-import flownavigation.path.SimplePathContainer;
 import flownavigation.path.Path;
 import flownavigation.path.PathContainer;
 import flownavigation.path.PathContainerView;

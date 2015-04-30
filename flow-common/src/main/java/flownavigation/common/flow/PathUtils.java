@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package flownavigation.path;
+package flownavigation.common.flow;
 
 import android.view.View;
 import android.view.ViewTreeObserver;

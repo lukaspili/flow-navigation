@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package flownavigation.common;
+package flownavigation.common.flow;
 
 import android.os.Parcel;
 import android.os.Parcelable;

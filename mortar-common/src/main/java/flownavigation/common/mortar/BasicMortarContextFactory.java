@@ -1,4 +1,4 @@
-package com.example.flow.mortar;
+package flownavigation.common.mortar;
 
 import android.content.Context;
 import android.content.ContextWrapper;
@@ -12,12 +12,12 @@ import mortar.MortarScope;
 /**
  * @author Lukasz Piliszczuk - lukasz.pili@gmail.com
  */
-public class MortarContextFactory implements PathContextFactory {
+public class BasicMortarContextFactory implements PathContextFactory {
 
     private final ScreenScoper screenScoper;
 
-    public MortarContextFactory() {
-        screenScoper = new ScreenScoper();
+    public BasicMortarContextFactory(ScreenScoper screenScoper) {
+        this.screenScoper = screenScoper;
     }
 
     @Override
@@ -38,7 +38,7 @@ public class MortarContextFactory implements PathContextFactory {
 
         static void destroyScope(Context context) {
             MortarScope scope = MortarScope.getScope(context);
-            Log.d(MortarContextFactory.class.getCanonicalName(), "Flow navigation - Destroy scope " + scope.getName());
+            Log.d(BasicMortarContextFactory.class.getCanonicalName(), "MortarContextFactory - Destroy scope " + scope.getName());
             scope.destroy();
         }
 

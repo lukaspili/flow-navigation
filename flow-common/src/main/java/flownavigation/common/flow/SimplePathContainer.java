@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package flownavigation.path;
+package flownavigation.common.flow;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -29,7 +29,10 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 import flow.Flow;
-import flownavigation.view.Layout;
+import flownavigation.path.Path;
+import flownavigation.path.PathContainer;
+import flownavigation.path.PathContext;
+import flownavigation.path.PathContextFactory;
 
 import static flow.Flow.Direction.BACKWARD;
 import static flow.Flow.Direction.FORWARD;

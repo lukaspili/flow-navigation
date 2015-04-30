@@ -1,1 +1,4 @@
-include ':library', ':sample'
+include ':library',
+        ':flow-common',
+        ':mortar-common',
+        ':sample'

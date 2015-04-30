@@ -3,9 +3,10 @@ package com.example.flow.mortar;
 import android.content.Context;
 import android.util.AttributeSet;
 
+import flownavigation.common.flow.FramePathContainerView;
+import flownavigation.common.flow.SimplePathContainer;
+import flownavigation.common.mortar.BasicMortarContextFactory;
 import flownavigation.path.Path;
-import flownavigation.path.SimplePathContainer;
-import flownavigation.view.FramePathContainerView;
 
 /**
  * @author Lukasz Piliszczuk <lukasz.pili@gmail.com>
@@ -13,6 +14,6 @@ import flownavigation.view.FramePathContainerView;
 public class MortarPathContainerView extends FramePathContainerView {
 
     public MortarPathContainerView(Context context, AttributeSet attrs) {
-        super(context, attrs, new SimplePathContainer(flownavigation.R.id.screen_switcher_tag, Path.contextFactory(new MortarContextFactory())));
+        super(context, attrs, new SimplePathContainer(flownavigation.common.flow.R.id.screen_switcher_tag, Path.contextFactory(new BasicMortarContextFactory(new ScreenScoper()))));
     }
 }

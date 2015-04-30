@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package flownavigation.view;
+package flownavigation.common.flow;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;

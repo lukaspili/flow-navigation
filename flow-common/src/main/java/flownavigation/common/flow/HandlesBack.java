@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package flownavigation.common;
+package flownavigation.common.flow;
 
 /**
  * Implemented by views that want the option to intercept back button taps. If a view has subviews
