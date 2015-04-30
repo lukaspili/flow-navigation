@@ -28,7 +28,18 @@ During FORWARD navigation, Flow-navigation preserves the scope and the view is s
 
 The structure of Flow-navigation is very similar to the one of Flow-path. You basically need to replace the package import from flow.path to flownavigation. Classes like `Path` and `PathContainer` still exist and work in the same way than the ones from Flow-path.
 
-In addition, Flow-navigation provides classes from Flow sample that can be reused often, like `@Layout` annotation (removed from Flow library), `SimplePathContainer` and `FramePathContainerView`.
+In addition, Flow-navigation provides two helper libraries to work with Flow and Mortar:
+
+### flow-common
+
+Provides classes from Flow sample that can be reused often, like `@Layout` annotation (removed from Flow library), `SimplePathContainer` and `FramePathContainerView`.
+
+### mortar-common
+
+Provides common classes from Flow + Mortar sample like `ScreenScoper` and `MortarContextFactory`.
+
+
+## Getting started 
 
 You can check the sample in order to see details on a complete implementation of Flow-navigation with Flow / Mortar / Dagger2.
 
@@ -50,14 +61,18 @@ repositories {
 }
 
 dependencies {
-    compile 'com.github.lukaspili:flow-navigation:0.1-SNAPSHOT'
+    compile 'com.github.lukaspili:flow-navigation:0.2-SNAPSHOT'
+    
+    // optional
+    compile 'com.github.lukaspili:flow-navigation-flow-common:0.2-SNAPSHOT'
+    compile 'com.github.lukaspili:flow-navigation-mortar-common:0.2-SNAPSHOT'
 }
 ```
 
 
 ## Mortar MVP
 
-Mortar MVP is another experiment around Mortar and Flow.  
+Mortar-MVP is another experiment around Mortar and Flow.  
 It focuses on removing the boilerplate code that requires the MVP pattern with Mortar / Flow / Dagger 2.  
 Check it out here: [https://github.com/lukaspili/mortar-mvp](https://github.com/lukaspili/mortar-mvp)
 
@@ -70,4 +85,4 @@ Check it out here: [https://github.com/lukaspili/mortar-mvp](https://github.com/
 
 ## License
 
-Mortar MVP is released under the MIT license. See the LICENSE file for details.
+Flow-navigation is released under the MIT license. See the LICENSE file for details.
